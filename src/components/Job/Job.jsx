@@ -1,8 +1,10 @@
 import { TiLocationOutline } from "react-icons/ti";
 import { CiDollar } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 const Job = ({ job }) => {
 	const {
+		id,
 		logo,
 		job_title,
 		company_name,
@@ -43,7 +45,9 @@ const Job = ({ job }) => {
 					</h2>
 				</div>
 				<div className="card-actions">
-					<button className="btn btn-primary">View Details</button>
+					<Link to={`/job/${id}`}>
+						<button className="btn btn-primary">View Details</button>
+					</Link>
 				</div>
 			</div>
 		</div>
